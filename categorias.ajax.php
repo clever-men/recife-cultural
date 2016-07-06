@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	header( 'Cache-Control: no-cache' );
 	header( 'Content-type: application/xml; charset="utf-8"', true );
 
@@ -62,7 +62,7 @@
 	
 	//Setando o valor dos arrays
 		
-		$categoria = array('Shopping Rio Mar','Shopping Plaza','Shopping Recife');
+		$categoria = array('Shopping Rio Mar Recife','Shopping Plaza Casa Forte','Shopping center recife','Shopping Tacaruna');
 		
 		//Agora montar o foreach
 	
