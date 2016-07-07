@@ -10,6 +10,7 @@ function initMap() {
 	
     var options = {
         zoom: 5,
+        scrollwheel: false,
 		center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };

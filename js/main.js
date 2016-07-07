@@ -25,53 +25,53 @@ $(document).ready(function() {
 	});
 });
 
-	//LOCAL STORAGE
-	function limpar(){
-		
-		localStorage.clear();
-		window.location = window.location;
-	}
-
-	function addLista(valor){
+//LOCAL STORAGE
+function limpar(){
 	
-		 /* cria a variavel valor */	
-		 localStorage.setItem(valor, valor);
-		 
-	}
+	localStorage.clear();
+	window.location = window.location;
+}
 
-	function listar(){
-		// variáveis
-		var i = 0,
-		// instancia do objeto Storage
-			local = localStorage,
-		// array das chaves e dos seus valores
-			arrayChaves = [],
-			arrayValores = [],
-		// tem o total de itens gravados
-			total = local.length,
-		// usadas no laço
-			chave = '',
-			valor = '';
-		 
-		while(i < total){
-		// retorna a chave
-			chave = local.key(i);
-			// registra a chave
-				arrayChaves[i] = chave;
+function addLista(valor){
+
+	 /* cria a variavel valor */	
+	 localStorage.setItem(valor, valor);
+	 
+}
+
+function listar(){
+	// variáveis
+	var i = 0,
+	// instancia do objeto Storage
+		local = localStorage,
+	// array das chaves e dos seus valores
+		arrayChaves = [],
+		arrayValores = [],
+	// tem o total de itens gravados
+		total = local.length,
+	// usadas no laço
+		chave = '',
+		valor = '';
+	 
+	while(i < total){
+	// retorna a chave
+		chave = local.key(i);
+		// registra a chave
+			arrayChaves[i] = chave;
+	// retorna o valor
+		valor = local.getItem(chave);
 		// retorna o valor
-			valor = local.getItem(chave);
-			// retorna o valor
-			arrayValores[i] = valor;
-		i++;
-		}
-		
-		/* separa o array por uma quebra de linha */
-		var res = arrayValores.join("<br/>");
-		
-		/* exibe a lista  */
-		$("#minhalista").html(res).show();
-		 
-		// usando o console do Chrome para verificar os arrays formados
-		console.log(arrayChaves, arrayValores);
-		
+		arrayValores[i] = valor;
+	i++;
 	}
+	
+	/* separa o array por uma quebra de linha */
+	var res = arrayValores.join("<br/>");
+	
+	/* exibe a lista  */
+	$("#minhalista").html(res).show();
+	 
+	// usando o console do Chrome para verificar os arrays formados
+	console.log(arrayChaves, arrayValores);
+	
+}
