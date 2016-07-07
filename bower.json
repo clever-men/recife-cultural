@@ -1,0 +1,23 @@
+{
+  "name": "Recife Cultural",
+  "homepage": "https://github.com/clever-men/recife-cultural",
+  "authors": [
+    "bruno_severiano <severianobruno@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "bourbon": "^4.2.7",
+    "jquery": "1.12.4"
+  }
+}

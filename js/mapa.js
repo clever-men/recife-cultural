@@ -1,8 +1,10 @@
 var map;
-var directionsDisplay;
-var directionsService = new google.maps.DirectionsService();
 
-function initialize() {	
+function initMap() {
+	
+	var directionsService = new google.maps.DirectionsService();
+	var directionsDisplay;
+
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	var latlng = new google.maps.LatLng(-8.0710079,-34.9287891);
 	
@@ -12,7 +14,7 @@ function initialize() {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    map = new google.maps.Map(document.getElementById("mapa"), options);
+    map = new google.maps.Map(document.getElementById("map"), options);
 	directionsDisplay.setMap(map);
 	directionsDisplay.setPanel(document.getElementById("trajeto-texto"));
 	
@@ -36,7 +38,6 @@ function initialize() {
 	}
 }
 
-initialize();
 
 function passaValor(valor){
 	

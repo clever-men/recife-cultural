@@ -3,25 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
     <meta name="description" content="Recife Cultural">
     <meta name="author" content="Recife Cultural">
     <link rel="icon" href="img/favicon.ico">
 
     <title>Recife Cultural</title>
 
-	<link rel="stylesheet" type="text/css" href="css/estilo.css"> 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css"> 
   </head>
 
   <body>
     <div class="container">
       <div class="header clearfix">
-		<br>
         <nav>
           <ul class="nav nav-pills pull-right">
             <li role="presentation" class="active"><a href="#">Home</a></li>
@@ -63,12 +57,17 @@
 			</div>
 			<div>
 				<p id="demo">Clique no botão para obter a sua posição.</p></br>
-				<input type="submit" onclick="getLocation()" id="btnEnviar" name="btnEnviar" value="Veja a rota" />
+				<input type="submit" class="btn btn-primary" onclick="getLocation()" id="btnEnviar" name="btnEnviar" value="Veja a rota" />
 			</div>
 		</form>
 		<div id="trajeto-texto"></div>
-		<div id="mapa"></div>
-		<div class="modal-footer">
+		<div class="row">
+			<div class="col-sm-8">
+				<div id="map"></div>		
+			</div>
+			<div class="col-sm-4">
+				<div class="modal-footer"></div>
+			</div>
 		</div>
 	</div>
 						
@@ -79,7 +78,7 @@
 			<!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<button type="button" class="btn btn-primary close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title">Minha lista</h4>
 				</div>
 				<div class="modal-body">
@@ -88,103 +87,31 @@
 					<button id="limpar" onClick="limpar();">Limpar</button>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
-		$(document).ready(function()
-		{
-			$("#myModal").modal("show");
-		});
-	</script>   
+
 
       <footer class="footer">
-        <p>&copy; 2016 Company, Inc.</p>
+      	<div class="container">
+	        <p>&copy; 2016 Company, Inc.</p>  		
+      	</div>
       </footer>
 
     </div> <!-- /container -->
-	<script src="http://www.google.com/jsapi"></script>
-	<script type="text/javascript">
-		 google.load('jquery', '1.3');
-	</script>		
 
-	<script type="text/javascript">
-		$(function(){
-			$('#cod_categorias').change(function(){
-				if( $(this).val() ) {
-					$('#lista').hide();
-					$('.carregando').show();
-					$.getJSON('categorias.ajax.php?search=',{cod_categorias: $(this).val(), ajax: 'true'}, function(j){
-						var options = '';	
-						
-						for (var i = 0; i < j.length; i++) {
-							options += '<li><a href="#" id="item" onclick="passaValor(' +"'"+ j[i].nome +"'"+ ');addLista(' +"'"+ j[i].nome +"'"+ ');"  >' + j[i].nome + '</a></li>';
-						}	
-						$('#lista').html(options).show();
-						$('.carregando').hide();
-					});
-				} else {
-					$('#lista').html('<li>– Nenhum item encontrado –</li>');
-				}
-			});
-		});
-		
-	</script>
-	<script type="text/javascript">
-	function limpar(){
-		localStorage.clear();
-		window.location = window.location;
-	}
-	function addLista(valor){
-	
-		 localStorage.setItem(valor, valor);
-		 
-		 if (localStorage.getItem(valor)) {
-			var dados = '<li>'+localStorage.getItem(valor)+'</li>';
-			//$("#minhalista2").html(dados).show();
-		  }
-	}
-	function listar(){
-		// variáveis
-		var i = 0,
-		// instancia do objeto Storage
-			local = localStorage,
-		// array das chaves e dos seus valores
-			arrayChaves = [],
-			arrayValores = [],
-		// tem o total de itens gravados
-			total = local.length,
-		// usadas no laço
-			chave = '',
-			valor = '';
-		 
-		while(i < total){
-		// retorna a chave
-			chave = local.key(i);
-			// registra a chave
-				arrayChaves[i] = chave;
-		// retorna o valor
-			valor = local.getItem(chave);
-			// retorna o valor
-			arrayValores[i] = valor;
-		i++;
-		}
-		
-		var res = arrayValores.join("<br/>");
-		
-		$("#minhalista").html(res).show();
-		 
-		// usando o console do Chrome para verificar os arrays formados
-		console.log(arrayChaves, arrayValores);
-		
-	}
-	</script>
-	<script src="js/jquery.min.js"></script>
+
+
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <!-- Main file -->
+	<script src="js/main.js"></script>
 	<!-- Maps API Javascript -->
-    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
- 
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCAn0cec2pUCiK4DfKr_wNxcs1sHfmyKA&callback=initMap"
+        async defer></script>
+
     <!-- Arquivo de inicialização do mapa -->
 	<script src="js/mapa.js"></script>
 	
