@@ -23,21 +23,20 @@ $(document).ready(function() {
 			}
 		});
 	});
+});
 
 	//LOCAL STORAGE
 	function limpar(){
+		
 		localStorage.clear();
 		window.location = window.location;
 	}
 
 	function addLista(valor){
 	
+		 /* cria a variavel valor */	
 		 localStorage.setItem(valor, valor);
 		 
-		 if (localStorage.getItem(valor)) {
-			var dados = '<li>'+localStorage.getItem(valor)+'</li>';
-			//$("#minhalista2").html(dados).show();
-		  }
 	}
 
 	function listar(){
@@ -66,13 +65,13 @@ $(document).ready(function() {
 		i++;
 		}
 		
+		/* separa o array por uma quebra de linha */
 		var res = arrayValores.join("<br/>");
 		
+		/* exibe a lista  */
 		$("#minhalista").html(res).show();
 		 
 		// usando o console do Chrome para verificar os arrays formados
 		console.log(arrayChaves, arrayValores);
 		
 	}
-
-});
