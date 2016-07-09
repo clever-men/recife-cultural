@@ -74,9 +74,9 @@
 											</div>
 											<div>
 												<p>Clique no botão para obter a sua posição.</p></br>
-												<button type="submit" class="btn btn-primary btn-ver-rota" id="btnEnviar" name="btnEnviar">Veja a rota</button>
-												<a href="#" class="btn btn-primary btn-ver-trajetoria" onClick='listar();' data-toggle="modal" data-target="#myModal">Ver Trajetória</a>
-												<a href="#" class="btn btn-primary btn-minha-lista" onClick='listar();' data-toggle="modal" data-target="#myHistorico">Ver histórico</a>
+												<button type="submit" class="btn btn-ver-rota" id="btnEnviar" name="btnEnviar">Veja a rota</button>
+												<a href="#" class="btn btn-ver-trajetoria" onClick='listar();' data-toggle="modal" data-target="#myModal">Ver Trajetória</a>
+												<a href="#" class="btn btn-minha-lista" onClick='listar();' data-toggle="modal" data-target="#myHistorico">Ver histórico</a>
 											</div>
 										</form>
 									</div>
