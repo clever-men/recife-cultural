@@ -76,7 +76,7 @@
 												<p>Clique no botão para obter a sua posição.</p></br>
 												<button type="submit" class="btn btn-primary btn-ver-rota" id="btnEnviar" name="btnEnviar">Veja a rota</button>
 												<a href="#" class="btn btn-primary btn-ver-trajetoria" onClick='listar();' data-toggle="modal" data-target="#myModal">Ver Trajetória</a>
-												<a href="#" class="btn btn-primary btn-minha-lista" onClick='listar();' data-toggle="modal" data-target="#myModal">Minha Lista</a>
+												<a href="#" class="btn btn-primary btn-minha-lista" onClick='listar();' data-toggle="modal" data-target="#myHistorico">Ver histórico</a>
 											</div>
 										</form>
 									</div>
@@ -102,12 +102,33 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="btn btn-primary close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Minha lista</h4>
+						<h4 class="modal-title">Trajetória</h4>
 					</div>
 					<div class="modal-body">
 						<!-- <ul id="minhalista"></ul> -->
 						<div id="trajeto-texto"></div>
 						<!-- <button id="limpar" onClick="limpar();">Limpar</button> -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal" id="myHistorico" role="dialog">
+			<div class="modal-dialog">
+								
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="btn btn-primary close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Histórico</h4>
+					</div>
+					<div class="modal-body">
+						<ul id="minhalista"></ul>
+						<button id="limpar" onClick="limpar();">Limpar</button>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>

@@ -1,4 +1,4 @@
-	
+
 $(document).ready(function() {
 	//MODAL
 	//$("#myModal").modal("show");
@@ -63,7 +63,7 @@ function listar(){
 		valor = local.getItem(chave);
 
 
-		valor = "<a>"+valor+"</a>";
+		valor = "<a href='' >"+valor+"</a></br>";
 
 		// retorna o valor
 		arrayValores[i] = valor;
@@ -72,7 +72,7 @@ function listar(){
 	}
 	
 	/* separa o array por uma quebra de linha */
-	var res = arrayValores.join("<br/>");
+	//var res = arrayValores.join("<br/>");
 	
 	/* exibe a lista  */
 	$("#minhalista").html(arrayValores).show();
