@@ -61,8 +61,13 @@ function listar(){
 			arrayChaves[i] = chave;
 	// retorna o valor
 		valor = local.getItem(chave);
+
+
+		valor = "<a>"+valor+"</a>";
+
 		// retorna o valor
 		arrayValores[i] = valor;
+
 	i++;
 	}
 	
@@ -70,7 +75,7 @@ function listar(){
 	var res = arrayValores.join("<br/>");
 	
 	/* exibe a lista  */
-	$("#minhalista").html(res).show();
+	$("#minhalista").html(arrayValores).show();
 	 
 	// usando o console do Chrome para verificar os arrays formados
 	console.log(arrayChaves, arrayValores);
