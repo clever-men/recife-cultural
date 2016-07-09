@@ -10,7 +10,7 @@
 	
 		//Setando o valor dos arrays
 		
-		$categoria = array('kinoplex, recife','Cinemark, recife','Cinepolis');
+		$categoria = array('UCI Kinoplex Shopping Recife','Cinemark Riomar Recife','Cinépolis Shopping Guararapes');
 		
 		//Agora montar o foreach
 	
@@ -26,7 +26,7 @@
 	
 	//Setando o valor dos arrays
 		
-		$categoria = array('Boa Viagem','Pina','Piedade');
+		$categoria = array('Pra de Boa Viagem, Recife','Praia do Pina, Recife','Praia de Piedade, Jaboatão dos Guararapes');
 		
 		//Agora montar o foreach
 	
