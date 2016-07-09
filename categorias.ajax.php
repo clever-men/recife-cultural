@@ -10,7 +10,7 @@
 	
 		//Setando o valor dos arrays
 		
-		$categoria = array('UCI Kinoplex Shopping, Recife','Cinemark Riomar, Recife','Cinépolis Shopping Guararapes, Jaboatão dos Guararapes');
+		$categoria = array('Uci Kinoplex - Travessa Padre Carapuceiro, 777 - Boa Viagem, Recife - PE, 51020-280','Cinemark - Avenida República do Líbano, 251 - Pina, Recife - PE, 51110-160','Cinépolis - Shopping Guararapes - Avenida Barreto de Menezes, 800 - Piedade, Jaboatão dos Guararapes - PE, 54325-000');
 		
 		//Agora montar o foreach
 	
@@ -26,7 +26,7 @@
 	
 	//Setando o valor dos arrays
 		
-		$categoria = array('Pra de Boa Viagem, Recife','Praia do Pina, Recife','Praia de Piedade, Jaboatão dos Guararapes');
+		$categoria = array('Hotel Boa Viagem Praia - Avenida Boa Viagem, 5576 - Boa Viagem, Recife - PE, 51030-000','Praia do Pina (Praia do Sport) - 482, Avenida Boa Viagem, 480 - Boa Viagem, Recife - PE','Praia de Piedade - Piedade, Jaboatão dos Guararapes - PE');
 		
 		//Agora montar o foreach
 	
@@ -44,7 +44,7 @@
 	
 	//Setando o valor dos arrays
 		
-		$categoria = array('Museo Brenand','Museo Da cidade','Museo da abolicao');
+		$categoria = array('Instituto Ricardo Brennand - Alameda Antônio Brennand, s/n - São João - Várzea, Recife - PE, 50791-904','Museu da Cidade do Recife - Forte das Cinco Pontas - Praça das Cinco Pontas, s/n - São José, Recife - PE, 50020-500','Museu da Abolição - Rua Benfica, 1150 - Madalena, Recife - PE, 50720-001');
 		
 		//Agora montar o foreach
 	
@@ -62,7 +62,7 @@
 	
 	//Setando o valor dos arrays
 		
-		$categoria = array('Shopping Rio Mar Recife','Shopping Plaza Casa Forte','Shopping center recife','Shopping Tacaruna');
+		$categoria = array('Shopping RioMar Recife - Avenida República do Líbano, 251 - Pina, Recife - PE, 51110-160','Plaza Shopping - Rua Doutor João Santos Filho, 255 - Casa Forte, Recife - PE, 52060-904','Shopping Recife - Rua Padre Carapuceiro, 777 - Boa Viagem, Recife - PE, 51020-900','Shopping Tacaruna - Avenida Governador Agamenon Magalhães, 153 - Santo Amaro, Recife - PE, 50110-900');
 		
 		//Agora montar o foreach
 	
