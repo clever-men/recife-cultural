@@ -1,21 +1,19 @@
 var map;
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
 
-function initMap() {
-	
-	var directionsService = new google.maps.DirectionsService();
-	var directionsDisplay;
-
+function initialize() {	
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	var latlng = new google.maps.LatLng(-8.0710079,-34.9287891);
 	
     var options = {
         zoom: 5,
-        scrollwheel: false,
 		center: latlng,
+		scrollwheel: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    map = new google.maps.Map(document.getElementById("map"), options);
+    map = new google.maps.Map(document.getElementById("mapa"), options);
 	directionsDisplay.setMap(map);
 	directionsDisplay.setPanel(document.getElementById("trajeto-texto"));
 	
@@ -39,10 +37,11 @@ function initMap() {
 	}
 }
 
+google.maps.event.addDomListener(window, 'load', initialize);
 
 function passaValor(valor){
 	
-	alert("Sua escolha foi: "+valor);
+	alert("Sua escolha foi: " + valor);
 	
 	var x = document.getElementById("demo");
 	
@@ -58,9 +57,19 @@ function passaValor(valor){
 	
 			var saida = valor;	
 			
-			document.getElementById('txtEnderecoPartida').value = entrada;
+			//document.getElementById('txtEnderecoPartida').value = entrada;
 			
-			document.getElementById('txtEnderecoChegada').value = saida;
+			document.getElementById('txtEnderecoChegada').value = entrada;
+
+			x.innerHTML = "Latitude: " + position.coords.latitude +
+		    "<br>Longitude: " + position.coords.longitude;
+
+
+			var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+				+entrada+"&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:C%7C"
+				+entrada+"&key=AIzaSyBCAn0cec2pUCiK4DfKr_wNxcs1sHfmyKA";
+
+		    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
 	}
 	
 	function showError(error) {
@@ -83,7 +92,7 @@ function passaValor(valor){
 
 }
 
-$("form").submit(function(event) {
+$("#form-location").on('submit', function(event) {
 	event.preventDefault();
 	
 	var enderecoPartida = $("#txtEnderecoPartida").val();

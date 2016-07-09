@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -58,27 +58,31 @@
 					</select>					
 				</div>
 			</form>
-			<div id="map" class="map"></div>
+			<div id="mapa" class="map"></div>
 			<div class="jumbotron">
 				<ul id="lista" class="list-results"></ul>
 			</div>
 		</div>
 
 		<div id="site">
-			<form method="post" action="index.php">
+			<form id="form-location" method="post" action="index.php">
 				<div>
-					<input type="hidden" id="txtEnderecoPartida" name="txtEnderecoPartida"  />
+					<input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida"  />
 				</div>
 				<div>
-					<input type="hidden" id="txtEnderecoChegada" name="txtEnderecoChegada" />
+					<input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" />
 				</div>
 				<div>
-					<p id="demo">Clique no botão para obter a sua posição.</p></br>
-					<input type="submit" class="btn btn-primary" onclick="getLocation()" id="btnEnviar" name="btnEnviar" value="Veja a rota" />
+					<p>Clique no botão para obter a sua posição.</p></br>
+					<button type="submit" class="btn btn-primary" id="btnEnviar" name="btnEnviar">Veja a rota</button>
+					<p id="demo"></p>
+					<div id="mapholder"></div>
+
 				</div>
 			</form>
 		</div>
 						
+		<div id="trajeto-texto"></div>
 	    <!-- Modal -->
 		<div class="modal" id="myModal" role="dialog">
 			<div class="modal-dialog">
@@ -117,8 +121,8 @@
     <!-- Main file -->
 	<script src="js/main.js"></script>
 	<!-- Maps API Javascript -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCAn0cec2pUCiK4DfKr_wNxcs1sHfmyKA&callback=initMap"
-        async defer></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCAn0cec2pUCiK4DfKr_wNxcs1sHfmyKA"></script>
 
     <!-- Arquivo de inicialização do mapa -->
 	<script src="js/mapa.js"></script>
