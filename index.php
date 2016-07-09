@@ -52,8 +52,8 @@
 				<div class="clearfix">
 					<div class="section-fluid">
 						<div class="col-md-6">
-							<div class="container">
-								<div class="app-content">
+							<div class="app-content">
+								<div id="site">
 									<form id="form" class="form-select">
 										<select name="cod_categorias" id="cod_categorias" class="select">
 											<option value="">Escolha uma categoria</option>
@@ -64,22 +64,20 @@
 										</select>					
 									</form>
 									<ul id="lista" class="list-results"></ul>
-									<div id="site">
-										<form id="form-location" method="post" action="index.php">
-											<div>
-												<input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida"  />
-											</div>
-											<div>
-												<input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" />
-											</div>
-											<div>
-												<p>Clique no botão para obter a sua posição.</p></br>
-												<button type="submit" class="btn btn-ver-rota" id="btnEnviar" name="btnEnviar">Veja a rota</button>
-												<a href="#" class="btn btn-ver-trajetoria" onClick='listar();' data-toggle="modal" data-target="#myModal">Ver Trajetória</a>
-												<a href="#" class="btn btn-minha-lista" onClick='listar();' data-toggle="modal" data-target="#myHistorico">Ver histórico</a>
-											</div>
-										</form>
-									</div>
+									<form id="form-location" method="post" action="index.php">
+										<div>
+											<input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida"  />
+										</div>
+										<div>
+											<input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" />
+										</div>
+										<div class="botoes-de-funcoes">
+											<p>Clique no botão para obter a sua posição.</p></br>
+											<button type="submit" class="btn btn-ver-rota" id="btnEnviar" name="btnEnviar">Veja a rota</button>
+											<a href="#" class="btn btn-ver-trajetoria" onClick='listar();' data-toggle="modal" data-target="#myModal">Ver Trajetória</a>
+											<a href="#" class="btn btn-minha-lista" onClick='listar();' data-toggle="modal" data-target="#myHistorico">Ver histórico</a>
+										</div>
+									</form>
 								</div>
 							</div>
 						</div>

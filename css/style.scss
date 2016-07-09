@@ -13,6 +13,7 @@ $azul-claro: #21b8ff;
 $azul: #427eed;
 $cinza-claro: #f1eded;
 $laranja-claro: #ee851c;
+$roxo:#7d3793;
 
 /* HELPERS ---------------------------------*/
 
@@ -38,10 +39,11 @@ body{
 /* HEADER ---------------------------------*/
 
 .header{
+	@include position(fixed, 0 null null 0)
 	background-color: $azul;
 	box-shadow: 0 0 4px rgba($preto, 0.5);
-	position: relative;
 	z-index: 999;
+	width: 100%;
 	.header-content{
 		padding: 7px 0;
 	}
@@ -66,8 +68,15 @@ body{
 }
 
 .app-content{
-	position: relative;
-	padding-top: 50px;
+	//position: absolute;
+	height: 100vh;
+	//padding-top: 50px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	#site{
+		margin: auto;
+	}
 	.form-select{
 		//@include position(absolute, 10px null null 0);
 		z-index: 10;
@@ -130,15 +139,31 @@ input[type=text]{
 	border: none;
     text-transform: uppercase;
 }
-.btn-ver-rota {
+.botoes-de-funcoes .btn{
+	color: $branco;
 	padding: 8px 20px;
-    background-color: $laranja-claro;
-    box-shadow: 0px 4px 0px mix($laranja-claro, #000, 70%);
-    &:hover, &:focus, &:active{
-		color: $branco;
-		background-color: mix($laranja-claro, #000, 80%);
-		box-shadow: 0px 4px 0px mix($laranja-claro, #000, 70%);
+
+}
+
+@mixin btn-color($bgc){
+    background-color: $bgc;
+    box-shadow: 0px 4px 0px mix($bgc, #000, 70%);
+    &:hover, &:focus{
+		background-color: mix($bgc, #000, 80%);
+		box-shadow: 0px 4px 0px mix($bgc, #000, 70%);
     }
+}
+
+.btn-ver-rota {
+	@include btn-color($laranja-claro)
+}
+
+.btn-ver-trajetoria{
+	@include btn-color($azul)
+}
+
+.btn-minha-lista {
+	@include btn-color($roxo)
 }
 
 /* Footer ---------------------------------*/
