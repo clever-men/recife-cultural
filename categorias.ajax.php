@@ -11,14 +11,17 @@
 		//Setando o valor dos arrays
 		$categoria = array(
 		    array(
+		    	"codigo" => 1,
 		        "nome" => "Uci Kinoplex",
 		        "endereco" => "Travessa Padre Carapuceiro, 777 - Boa Viagem, Recife - PE, 51020-280"
 		    ),
 		    array(
+		    	"codigo" => 2,
 		        "nome" => "Cinemark",
 		        "endereco" => "Avenida República do Líbano, 251 - Pina, Recife - PE, 51110-160"
 		    ),
 		    array(
+		    	"codigo" => 3,
 		        "nome" => "Cinépolis",
 		        "endereco" => "Shopping Guararapes - Avenida Barreto de Menezes, 800 - Piedade, Jaboatão dos Guararapes - PE, 54325-000"
 		    )
@@ -42,14 +45,17 @@
 
 		$categoria = array(
 		    array(
+		    	"codigo" => 1,
 		        "nome" => "Hotel Boa Viagem Praia",
 		        "endereco" => "Avenida Boa Viagem, 5576 - Boa Viagem, Recife - PE, 51030-000"
 		    ),
 		    array(
+		    	"codigo" => 2,
 		        "nome" => "Praia do Pina (Praia do Sport) - 482",
 		        "endereco" => "Avenida Boa Viagem, 480 - Boa Viagem, Recife - PE"
 		    ),
 		    array(
+		    	"codigo" => 3,
 		        "nome" => "Praia de Piedade - Piedade",
 		        "endereco" => "Praia de Piedade - Piedade - Jaboatão dos Guararapes - PE"
 		    )
@@ -73,14 +79,17 @@
 
 		$categoria = array(
 		    array(
+		    	"codigo" => 1,
 		        "nome" => "Instituto Ricardo Brennand",
 		        "endereco" => "Alameda Antônio Brennand, s/n - São João - Várzea, Recife - PE, 50791-904"
 		    ),
 		    array(
+		    	"codigo" => 2,
 		        "nome" => "Museu da Cidade do Recife - Forte das Cinco Pontas",
 		        "endereco" => "Praça das Cinco Pontas, s/n - São José, Recife - PE, 50020-500"
 		    ),
 		    array(
+		    	"codigo" => 3,
 		        "nome" => "Museu da Abolição",
 		        "endereco" => "Rua Benfica, 1150 - Madalena, Recife - PE, 50720-001"
 		    )
@@ -105,18 +114,22 @@
 
 		$categoria = array(
 		    array(
+		    	"codigo" => 1,
 		        "nome" => "Shopping RioMar Recife",
 		        "endereco" => "Avenida República do Líbano, 251 - Pina, Recife - PE, 51110-160"
 		    ),
 		    array(
+		    	"codigo" => 2,
 		        "nome" => "Plaza Shopping",
 		        "endereco" => "Rua Doutor João Santos Filho, 255 - Casa Forte, Recife - PE, 52060-904"
 		    ),
 		    array(
+		    	"codigo" => 3,
 		        "nome" => "Shopping Recife",
 		        "endereco" => "Rua Padre Carapuceiro, 777 - Boa Viagem, Recife - PE, 51020-900"
 		    ),
 		    array(
+		    	"codigo" => 4,
 		        "nome" => "Shopping Tacaruna",
 		        "endereco" => "Avenida Governador Agamenon Magalhães, 153 - Santo Amaro, Recife - PE, 50110-900"
 		    )

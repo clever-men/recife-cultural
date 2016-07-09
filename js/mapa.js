@@ -65,11 +65,11 @@ function passaValor(valor){
 		    "<br>Longitude: " + position.coords.longitude;
 
 
-			var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
-				+saida+"&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:C%7C"
-				+saida+"&key=AIzaSyBCAn0cec2pUCiK4DfKr_wNxcs1sHfmyKA";
+			// var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+			// 	+saida+"&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:C%7C"
+			// 	+saida+"&key=AIzaSyBCAn0cec2pUCiK4DfKr_wNxcs1sHfmyKA";
 
-		    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+		 //    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
 	}
 	
 	function showError(error) {

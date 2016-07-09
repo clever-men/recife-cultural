@@ -76,9 +76,8 @@
 									<div>
 										<p>Clique no botão para obter a sua posição.</p></br>
 										<button type="submit" class="btn btn-primary" id="btnEnviar" name="btnEnviar">Veja a rota</button>
+										<a href="#" onClick='listar();' data-toggle="modal" data-target="#myModal">Minha Lista</a>
 										<p id="demo"></p>
-										<div id="mapholder"></div>
-
 									</div>
 								</form>
 							</div>
@@ -92,7 +91,7 @@
 			</div>
 		</section>
 						
-		<div id="trajeto-texto"></div>
+		<!-- <div id="trajeto-texto"></div> -->
 
 	    <!-- Modal -->
 		<div class="modal" id="myModal" role="dialog">
@@ -105,9 +104,9 @@
 						<h4 class="modal-title">Minha lista</h4>
 					</div>
 					<div class="modal-body">
-						<ul id="minhalista"></ul>
-					
-						<button id="limpar" onClick="limpar();">Limpar</button>
+						<!-- <ul id="minhalista"></ul> -->
+						<div id="trajeto-texto"></div>
+						<!-- <button id="limpar" onClick="limpar();">Limpar</button> -->
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>

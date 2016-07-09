@@ -13,7 +13,8 @@ $(document).ready(function() {
 					var options = '';	
 					
 					for (var i = 0; i < j.length; i++) {
-						options += '<input type="radio" name="opcao" class="item" onclick="passaValor(' +"'"+ j[i].endereco +"'"+ ');addLista(' +"'"+ j[i].nome +"'"+ ');"  >' + j[i].nome + '</br>';
+						options += '<li><label for="' + j[i].codigo +'"><input type="radio" name="opcao" id="'+ j[i].codigo + '" class="item" onclick="passaValor(' +"'"+ j[i]
+						.endereco +"'"+ ');addLista(' +"'"+ j[i].nome +"'"+ ');"  >' + j[i].nome + '</label></li>';
 					}	
 					$('#lista').html(options).show();
 					$('.carregando').hide();
