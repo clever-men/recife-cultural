@@ -67,6 +67,7 @@ body{
 
 .app-content{
 	position: relative;
+	padding-top: 50px;
 	.form-select{
 		//@include position(absolute, 10px null null 0);
 		z-index: 10;
