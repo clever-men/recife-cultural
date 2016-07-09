@@ -125,16 +125,19 @@ input[type=text]{
 	font-size: rem(18);
 }
 
-.btn {
+.btn{
 	@extend .trans;
-    background-color: $laranja-claro;
-    border: none;
+	border: none;
     text-transform: uppercase;
-    padding: 8px 20px;
+}
+.btn-ver-rota {
+	padding: 8px 20px;
+    background-color: $laranja-claro;
     box-shadow: 0px 4px 0px mix($laranja-claro, #000, 70%);
-    &:hover{
+    &:hover, &:focus, &:active{
 		color: $branco;
 		background-color: mix($laranja-claro, #000, 80%);
+		box-shadow: 0px 4px 0px mix($laranja-claro, #000, 70%);
     }
 }
 
