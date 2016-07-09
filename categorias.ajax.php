@@ -10,7 +10,7 @@
 	
 		//Setando o valor dos arrays
 		
-		$categoria = array('kinopex','Cinemark','Cinepolis');
+		$categoria = array('kinoplex, recife','Cinemark, recife','Cinepolis');
 		
 		//Agora montar o foreach
 	

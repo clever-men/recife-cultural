@@ -59,15 +59,15 @@ function passaValor(valor){
 			
 			//document.getElementById('txtEnderecoPartida').value = entrada;
 			
-			document.getElementById('txtEnderecoChegada').value = entrada;
+			document.getElementById('txtEnderecoChegada').value = saida;
 
 			x.innerHTML = "Latitude: " + position.coords.latitude +
 		    "<br>Longitude: " + position.coords.longitude;
 
 
 			var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
-				+entrada+"&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:C%7C"
-				+entrada+"&key=AIzaSyBCAn0cec2pUCiK4DfKr_wNxcs1sHfmyKA";
+				+saida+"&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:C%7C"
+				+saida+"&key=AIzaSyBCAn0cec2pUCiK4DfKr_wNxcs1sHfmyKA";
 
 		    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
 	}
