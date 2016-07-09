@@ -41,7 +41,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 function passaValor(valor){
 	
-	alert("Sua escolha foi: " + valor);
+	//alert("Sua escolha foi: " + valor);
 	
 	var x = document.getElementById("demo");
 	
@@ -63,7 +63,6 @@ function passaValor(valor){
 
 			x.innerHTML = "Latitude: " + position.coords.latitude +
 		    "<br>Longitude: " + position.coords.longitude;
-
 
 			// var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
 			// 	+saida+"&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:C%7C"
@@ -110,3 +109,22 @@ $("#form-location").on('submit', function(event) {
 		}
 	});
 });
+
+function enviaForm(){
+
+ 	var enderecoPartida = $("#txtEnderecoPartida").val();
+	var enderecoChegada = $("#txtEnderecoChegada").val();
+	
+	var request = {
+		origin: enderecoPartida,
+		destination: enderecoChegada,
+		travelMode: google.maps.TravelMode.DRIVING
+	};
+	
+	directionsService.route(request, function(result, status) {
+		if (status == google.maps.DirectionsStatus.OK) {
+			directionsDisplay.setDirections(result);
+		}
+	});
+
+}

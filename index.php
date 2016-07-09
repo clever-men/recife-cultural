@@ -66,10 +66,10 @@
 									<ul id="lista" class="list-results"></ul>
 									<form id="form-location" method="post" action="index.php">
 										<div>
-											<input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida"  />
+											<input type="hidden" id="txtEnderecoPartida" name="txtEnderecoPartida"  />
 										</div>
 										<div>
-											<input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" />
+											<input type="hidden" id="txtEnderecoChegada" name="txtEnderecoChegada" />
 										</div>
 										<div class="botoes-de-funcoes">
 											<p>Clique no botão para obter a sua posição.</p></br>
@@ -126,9 +126,10 @@
 					</div>
 					<div class="modal-body">
 						<ul id="minhalista"></ul>
-						<button id="limpar" onClick="limpar();">Limpar</button>
 					</div>
 					<div class="modal-footer">
+						<a onclick="enviaForm()" class="btn btn-success" name="btnEnviar" data-dismiss="modal">Veja a rota</button>
+						<a id="limpar" class="btn btn-info" onClick="limpar();">Limpar</a>
 						<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
 					</div>
 				</div>
@@ -141,8 +142,6 @@
 			</div>
 		</footer> -->
 	</div>
-
-
 
 
 	<script src="libs/jquery/dist/jquery.min.js"></script>

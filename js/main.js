@@ -14,7 +14,7 @@ $(document).ready(function() {
 					
 					for (var i = 0; i < j.length; i++) {
 						options += '<li><label for="' + j[i].codigo +'"><input type="radio" name="opcao" id="'+ j[i].codigo + '" class="item" onclick="passaValor(' +"'"+ j[i]
-						.endereco +"'"+ ');addLista(' +"'"+ j[i].nome +"'"+ ');"  >' + j[i].nome + '</label></li>';
+						.endereco +"'"+ ');addLista(' +"'"+ j[i].nome +"'"+ ',' +"'"+ j[i].endereco +"'"+ ');"  >' + j[i].nome + '</label></li>';
 					}	
 					$('#lista').html(options).show();
 					$('.carregando').hide();
@@ -33,10 +33,10 @@ function limpar(){
 	window.location = window.location;
 }
 
-function addLista(valor){
+function addLista(valor,endereco){
 
 	 /* cria a variavel valor */	
-	 localStorage.setItem(valor, valor);
+	 localStorage.setItem(valor, endereco);
 	 
 }
 
@@ -62,11 +62,10 @@ function listar(){
 	// retorna o valor
 		valor = local.getItem(chave);
 
-
-		valor = "<a href='' >"+valor+"</a></br>";
+		item = '<a href="#" id="historico" onclick="passaValor(\''+valor+'\')" >'+chave+'</a></br>';
 
 		// retorna o valor
-		arrayValores[i] = valor;
+		arrayValores[i] = item;
 
 	i++;
 	}
