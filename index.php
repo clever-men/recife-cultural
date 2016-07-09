@@ -48,42 +48,41 @@
 		</header>
 
 		<section id="corpo-app">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
+			<div class="">
+				<div class="clearfix">
+					<div class="section-fluid">
 						<div class="col-md-6">
 							<div class="app-content">
 								<form id="form" class="form-select">
 									<select name="cod_categorias" id="cod_categorias" class="select">
-										<option value="">-- Escolha uma categoria --</option>
-										<option value="1">-- CINEMA --</option>
-										<option value="2">-- PRAIAS --</option>
-										<option value="3">-- MUSEUS --</option>
-										<option value="4">-- SHOPPINGS --</option>
+										<option value="">Escolha uma categoria</option>
+										<option value="1">CINEMA</option>
+										<option value="2">PRAIAS</option>
+										<option value="3">MUSEUS</option>
+										<option value="4">SHOPPINGS</option>
 									</select>					
 								</form>
 								<ul id="lista" class="list-results"></ul>
-							</div>
-
-							<div id="site">
-								<form id="form-location" method="post" action="index.php">
-									<div>
-										<input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida"  />
-									</div>
-									<div>
-										<input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" />
-									</div>
-									<div>
-										<p>Clique no botão para obter a sua posição.</p></br>
-										<button type="submit" class="btn btn-primary" id="btnEnviar" name="btnEnviar">Veja a rota</button>
-										<a href="#" onClick='listar();' data-toggle="modal" data-target="#myModal">Minha Lista</a>
-										<p id="demo"></p>
-									</div>
-								</form>
+								<div id="site">
+									<form id="form-location" method="post" action="index.php">
+										<div>
+											<input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida"  />
+										</div>
+										<div>
+											<input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" />
+										</div>
+										<div>
+											<p>Clique no botão para obter a sua posição.</p></br>
+											<button type="submit" class="btn btn-primary" id="btnEnviar" name="btnEnviar">Veja a rota</button>
+											<a href="#" class="btn btn-primary" onClick='listar();' data-toggle="modal" data-target="#myModal">Minha Lista</a>
+											<p id="demo"></p>
+										</div>
+									</form>
+								</div>
 							</div>
 						</div>
 
-						<div class="col-md-6">
+						<div class="col-md-6 p0">
 							<div id="mapa" class="map"></div>	
 						</div>
 					</div>

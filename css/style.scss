@@ -12,6 +12,17 @@ $preto: #000;
 $azul-claro: #21b8ff;
 $azul: #427eed;
 $cinza-claro: #f1eded;
+$laranja-claro: #ee851c;
+
+/* HELPERS ---------------------------------*/
+
+.trans{
+	@include transition(all 0.3s ease);
+}
+
+.p0{
+	padding: 0;
+}
 
 /* BASE ---------------------------------*/
 
@@ -49,6 +60,11 @@ body{
 
 /* CONTENT ---------------------------------*/
 
+#corpo-app {
+    //padding-top: 50px;
+    //padding-bottom: 50px;
+}
+
 .app-content{
 	position: relative;
 	.form-select{
@@ -64,8 +80,11 @@ body{
 
 .form-select{
 	.select{
-		margin-top: 6px;
-		//width: 100%;
+	    background-color: #427eed;
+	    color: #fff;
+	    border: none;
+	    padding: 6px;
+	    border-radius: 2px;
 	}
 }
 
@@ -87,9 +106,7 @@ body{
 
 .map {
 	width: 100%;
-	height: 400px; 
-	float: left
-
+	height: 100vh;
 }
 
 #trajeto-texto { 
@@ -99,9 +116,25 @@ body{
 
 /* INPUTS ---------------------------------*/
 
+input[type=text]{
+	display: none;
+}
+
 .select{
-	height: 40px;
-	font-size: rem(24);
+	font-size: rem(18);
+}
+
+.btn {
+	@extend .trans;
+    background-color: $laranja-claro;
+    border: none;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    box-shadow: 0px 4px 0px mix($laranja-claro, #000, 70%);
+    &:hover{
+		color: $branco;
+		background-color: mix($laranja-claro, #000, 80%);
+    }
 }
 
 /* Footer ---------------------------------*/
