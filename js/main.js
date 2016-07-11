@@ -62,7 +62,7 @@ function listar(){
 	// retorna o valor
 		valor = local.getItem(chave);
 
-		item = '<a href="#" id="historico" onclick="passaValor(\''+valor+'\')" >'+chave+'</a></br>';
+		item = '<input type="radio" name="historico" id="historico" onclick="passaValor(\''+valor+'\');desabilitaBotao(1)" />&nbsp;'+chave+'</br>';
 
 		// retorna o valor
 		arrayValores[i] = item;
@@ -79,4 +79,19 @@ function listar(){
 	// usando o console do Chrome para verificar os arrays formados
 	console.log(arrayChaves, arrayValores);
 	
+}
+
+function desabilitaBotao(op){
+	
+	if (op == 1) 
+	{
+		document.getElementById("cmdContinuar").disabled = false; //Habilitando
+		//document.getElementById('cmdContinuar').style.display="block";
+				
+	}
+	else if (op == 2)
+	{
+		document.getElementById("cmdContinuar").disabled = true; //Desabilitando 
+		//document.getElementById('cmdContinuar').style.display="none";
+	}
 }

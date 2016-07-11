@@ -16,7 +16,7 @@
 
   </head>
 
-  <body>
+  <body onLoad="desabilitaBotao(2);">
   	<div class="main-container">  		
 		<header class="header clearfix">
 			<div class="header-content">
@@ -128,8 +128,8 @@
 						<ul id="minhalista"></ul>
 					</div>
 					<div class="modal-footer">
-						<a onclick="enviaForm()" class="btn btn-success" name="btnEnviar" data-dismiss="modal">Veja a rota</button>
-						<a id="limpar" class="btn btn-info" onClick="limpar();">Limpar</a>
+						<a onclick="enviaForm()" id="cmdContinuar" class="btn btn-success" name="btnEnviar" data-dismiss="modal">Veja a rota</button>
+						<a id="limpar" class="btn btn-info" onClick="limpar();" data-dismiss="modal">Limpar</a>
 						<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
 					</div>
 				</div>
