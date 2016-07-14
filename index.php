@@ -22,7 +22,7 @@
 			<div class="header-content">
 			    <div class="container text-center">
 					<h1 class="logo">
-						<img src="img/logo-recife-cultural.png" alt="Logo Recife Cultural">
+						<img src="img/logo-recife-cultural.svg" alt="Logo Recife Cultural">
 						<span class="text">Recife cultural</span>
 					</h1>
 					<!-- <nav>
