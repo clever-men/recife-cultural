@@ -6302,37 +6302,37 @@ img:hover {
   text-transform: uppercase;
 }
 
-.botoes-de-funcoes .btn {
+.botoes-de-funcoes .btn, .modal-footer .btn {
   color: #fff;
   padding: 8px 20px;
 }
 
-.btn-ver-rota {
+.btn-laranja-claro {
   background-color: #ee851c;
   box-shadow: 0px 4px 0px #a75d14;
 }
 
-.btn-ver-rota:hover, .btn-ver-rota:focus {
+.btn-laranja-claro:hover, .btn-laranja-claro:focus {
   background-color: #be6a16;
   box-shadow: 0px 4px 0px #a75d14;
 }
 
-.btn-ver-trajetoria {
+.btn-azul {
   background-color: #427eed;
   box-shadow: 0px 4px 0px #2e58a6;
 }
 
-.btn-ver-trajetoria:hover, .btn-ver-trajetoria:focus {
+.btn-azul:hover, .btn-azul:focus {
   background-color: #3565be;
   box-shadow: 0px 4px 0px #2e58a6;
 }
 
-.btn-minha-lista {
+.btn-roxo {
   background-color: #7d3793;
   box-shadow: 0px 4px 0px #582767;
 }
 
-.btn-minha-lista:hover, .btn-minha-lista:focus {
+.btn-roxo:hover, .btn-roxo:focus {
   background-color: #642c76;
   box-shadow: 0px 4px 0px #582767;
 }

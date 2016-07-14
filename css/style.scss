@@ -153,7 +153,7 @@ input[type=text]{
 	border: none;
     text-transform: uppercase;
 }
-.botoes-de-funcoes .btn{
+.botoes-de-funcoes .btn, .modal-footer .btn{
 	color: $branco;
 	padding: 8px 20px;
 
@@ -168,15 +168,15 @@ input[type=text]{
     }
 }
 
-.btn-ver-rota {
+.btn-laranja-claro {
 	@include btn-color($laranja-claro)
 }
 
-.btn-ver-trajetoria{
+.btn-azul{
 	@include btn-color($azul)
 }
 
-.btn-minha-lista {
+.btn-roxo {
 	@include btn-color($roxo)
 }
 

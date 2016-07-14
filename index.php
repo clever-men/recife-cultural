@@ -73,9 +73,9 @@
 										</div>
 										<div class="botoes-de-funcoes">
 											<p>Clique no botão para obter a sua posição.</p></br>
-											<button type="submit" class="btn btn-ver-rota" id="btnEnviar" name="btnEnviar">Veja a rota</button>
-											<a href="#" class="btn btn-ver-trajetoria" onClick='listar();' data-toggle="modal" data-target="#myModal">Ver Trajetória</a>
-											<a href="#" class="btn btn-minha-lista" onClick='listar();' data-toggle="modal" data-target="#myHistorico">Ver histórico</a>
+											<button type="submit" class="btn btn-laranja-claro" id="btnEnviar" name="btnEnviar">Veja a rota</button>
+											<a href="#" class="btn btn-azul" onClick='listar();' data-toggle="modal" data-target="#myModal">Ver Trajetória</a>
+											<a href="#" class="btn btn-roxo" onClick='listar();' data-toggle="modal" data-target="#myHistorico">Ver histórico</a>
 										</div>
 									</form>
 								</div>
@@ -108,7 +108,7 @@
 						<!-- <button id="limpar" onClick="limpar();">Limpar</button> -->
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+						<button type="button" class="btn btn-roxo" data-dismiss="modal">Fechar</button>
 					</div>
 				</div>
 			</div>
@@ -128,9 +128,9 @@
 						<ul id="minhalista"></ul>
 					</div>
 					<div class="modal-footer">
-						<a onclick="enviaForm()" id="cmdContinuar" class="btn btn-success" name="btnEnviar" data-dismiss="modal">Veja a rota</button>
-						<a id="limpar" class="btn btn-info" onClick="limpar();" data-dismiss="modal">Limpar</a>
-						<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+						<a onclick="enviaForm()" id="cmdContinuar" class="btn btn-laranja-claro" name="btnEnviar" data-dismiss="modal">Veja a rota</button>
+						<a id="limpar" class="btn btn-azul" onClick="limpar();" data-dismiss="modal">Limpar</a>
+						<button type="button" class="btn btn-roxo" data-dismiss="modal">Fechar</button>
 					</div>
 				</div>
 			</div>
