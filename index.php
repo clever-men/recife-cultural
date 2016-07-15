@@ -13,9 +13,6 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css"> 
 	
 	<link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico" />
-
-    <script src="js/app-cache.js"></script>
-	
   </head>
 
   <body onLoad="desabilitaBotao(2);">
@@ -25,7 +22,7 @@
 			    <div class="container text-center">
 					<h1 class="logo">
 						<img src="img/logo-recife-cultural.svg" alt="Logo Recife Cultural">
-						<span class="text">Recife cultural</span>
+						<span class="text">Recife cultural :)</span>
 					</h1>
 				</div>				
 			</div>
@@ -134,6 +131,7 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCAn0cec2pUCiK4DfKr_wNxcs1sHfmyKA"></script>
 
     <!-- Arquivo de inicialização do mapa -->
+    <script src="js/app-cache.js"></script>
 	<script src="js/mapa.js"></script>
 	
   </body>

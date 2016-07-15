@@ -4,6 +4,3 @@ function onUpdateReady(){
         location.reload();
     }
 }
-function mostrarApp() {
-    $("#app").show();
-}
