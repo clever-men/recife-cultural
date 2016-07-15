@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 	//MODAL
 	//$("#myModal").modal("show");

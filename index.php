@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" manifest="manifest.php">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,10 +14,12 @@
 	
 	<link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico" />
 
+    <script src="js/app-cache.js"></script>
+	
   </head>
 
   <body onLoad="desabilitaBotao(2);">
-  	<div class="main-container">  		
+  	<div id="app" class="main-container"> 		
 		<header class="header clearfix">
 			<div class="header-content">
 			    <div class="container text-center">
@@ -25,26 +27,8 @@
 						<img src="img/logo-recife-cultural.svg" alt="Logo Recife Cultural">
 						<span class="text">Recife cultural</span>
 					</h1>
-					<!-- <nav>
-					<button class="nav-button">
-						<span class="line line-1"></span>
-						<span class="line line-2"></span>
-						<span class="line line-3"></span>
-					</button>
-					<ul class="nav nav-pills pull-right">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#" onClick='listar();' data-toggle="modal" data-target="#myModal">Minha Lista</a></li>
-						<li><a href="#">Sobre</a></li>
-						<li><a href="#">Contato</a></li>
-					</ul>
-				</nav> -->
 				</div>				
 			</div>
-			<!-- <div class="label-main">
-				<div class="container">
-					<h2 class="title title-main">Escolha um destino Cultural</h2>
-				</div>
-			</div> -->
 		</header>
 
 		<section id="corpo-app">
@@ -88,10 +72,9 @@
 					</div>
 				</div>
 			</div>
+
 		</section>
 						
-		<!-- <div id="trajeto-texto"></div> -->
-
 	    <!-- Modal -->
 		<div class="modal" id="myModal" role="dialog">
 			<div class="modal-dialog">
@@ -103,9 +86,7 @@
 						<h4 class="modal-title">Trajetória</h4>
 					</div>
 					<div class="modal-body">
-						<!-- <ul id="minhalista"></ul> -->
 						<div id="trajeto-texto"></div>
-						<!-- <button id="limpar" onClick="limpar();">Limpar</button> -->
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-roxo" data-dismiss="modal">Fechar</button>
@@ -135,12 +116,11 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- <footer class="footer">
-			<div class="container">
-				<p>&copy; 2016 Company, Inc.</p>  		
-			</div>
-		</footer> -->
+		<span class="hidden">
+            <?php
+                echo md5(rand(0,9999));
+            ?>			
+		</span>
 	</div>
 
 
