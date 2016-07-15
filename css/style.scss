@@ -148,6 +148,8 @@ input[type=text]{
 	font-size: rem(18);
 }
 
+
+/*Botões*/
 .btn{
 	@extend .trans;
 	border: none;
@@ -178,6 +180,26 @@ input[type=text]{
 
 .btn-roxo {
 	@include btn-color($roxo)
+}
+
+.close {
+    color: $branco;
+    text-shadow: none;
+    opacity: 1;
+}
+
+/*Modal*/
+
+.modal-header{
+    color: $branco;
+    border-bottom: none;
+}
+
+.bg-roxo{
+	background-color: $roxo;	
+}
+.bg-azul{
+	background-color: $azul;	
 }
 
 /* Footer ---------------------------------*/

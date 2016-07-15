@@ -98,8 +98,8 @@
 								
 				<!-- Modal content-->
 				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="btn btn-primary close" data-dismiss="modal">&times;</button>
+					<div class="modal-header bg-azul">
+						<button type="button" class="btn close" data-dismiss="modal">&times;</button>
 						<h4 class="modal-title">Trajetória</h4>
 					</div>
 					<div class="modal-body">
@@ -120,8 +120,8 @@
 								
 				<!-- Modal content-->
 				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="btn btn-primary close" data-dismiss="modal">&times;</button>
+					<div class="modal-header bg-roxo">
+						<button type="button" class="btn close" data-dismiss="modal">&times;</button>
 						<h4 class="modal-title">Histórico</h4>
 					</div>
 					<div class="modal-body">

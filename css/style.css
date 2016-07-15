@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* IMPORTS ---------------------------------*/
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
@@ -6297,6 +6298,7 @@ img:hover {
   font-size: 1.125rem;
 }
 
+/*Botões*/
 .btn {
   border: none;
   text-transform: uppercase;
@@ -6335,6 +6337,26 @@ img:hover {
 .btn-roxo:hover, .btn-roxo:focus {
   background-color: #642c76;
   box-shadow: 0px 4px 0px #582767;
+}
+
+.close {
+  color: #fff;
+  text-shadow: none;
+  opacity: 1;
+}
+
+/*Modal*/
+.modal-header {
+  color: #fff;
+  border-bottom: none;
+}
+
+.bg-roxo {
+  background-color: #7d3793;
+}
+
+.bg-azul {
+  background-color: #427eed;
 }
 
 /* Footer ---------------------------------*/
