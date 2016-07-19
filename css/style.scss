@@ -37,10 +37,37 @@ body{
 	font-family: $font-default;
 }
 
+.main-container{
+	@extend .trans;
+	opacity: 0;
+	visibility: hidden;
+	&.page-loaded{
+		opacity: 1;
+		visibility: visible;		
+	}
+}
+
+@include keyframes(loader) {
+  0%, 100% {
+  	font-size: rem(20);
+  }
+  50% {
+  	font-size: rem(40);
+  }
+}
+
+.loader{
+	@include animation(loader 7.0s ease-in-out infinite);
+	padding: 30% 15px 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
 /* HEADER ---------------------------------*/
 
 .header{
-	@include position(fixed, 0 null null 0)
+	@include position(absolute, 0 null null 0);
 	background-color: $azul;
 	box-shadow: 0 0 4px rgba($preto, 0.5);
 	z-index: 999;
@@ -75,6 +102,27 @@ img:hover{
 }
 
 /* CONTENT ---------------------------------*/
+
+@include keyframes(color-change) {
+  0%, 100% {
+	background-color: rgba($laranja-claro, 0.5);
+  }
+  50% {
+	background-color: $cinza-claro;
+  }
+}
+
+#offline-page{
+	@include animation(color-change 7.0s ease-in-out infinite);
+	height: 100vh;
+	text-align: center;
+	align-items: center;
+	width: 100%;
+	display: none;
+	&.activate{	
+		display: flex;
+	}
+}
 
 #corpo-app {
     //padding-top: 50px;

@@ -13,21 +13,30 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css"> 
 	
 	<link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico" />
+
   </head>
 
   <body onLoad="desabilitaBotao(2);">
+  	<span class="loader">
+  		<span class="text">Carregando...</span>
+  	</span>
   	<div id="app" class="main-container"> 		
 		<header class="header clearfix">
 			<div class="header-content">
 			    <div class="container text-center">
 					<h1 class="logo">
 						<img src="img/logo-recife-cultural.svg" alt="Logo Recife Cultural">
-						<span class="text">Recife cultural :)</span>
+						<span class="text">Recife cultural</span>
 					</h1>
 				</div>				
 			</div>
 		</header>
 
+		<div id="offline-page">
+			<div class="container text-center">
+				<h2>Você está offline :(</h2>			
+			</div>
+		</div>
 		<section id="corpo-app">
 			<div class="">
 				<div class="clearfix">
@@ -123,6 +132,8 @@
 
 	<script src="libs/jquery/dist/jquery.min.js"></script>
 
+    <script src="js/app-cache.js"></script>
+
 	<script src="libs/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
     <!-- Main file -->
 	<script src="js/main.js"></script>
@@ -131,7 +142,6 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCAn0cec2pUCiK4DfKr_wNxcs1sHfmyKA"></script>
 
     <!-- Arquivo de inicialização do mapa -->
-    <script src="js/app-cache.js"></script>
 	<script src="js/mapa.js"></script>
 	
   </body>

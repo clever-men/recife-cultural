@@ -1,6 +1,11 @@
 $(document).ready(function() {
-	//MODAL
-	//$("#myModal").modal("show");
+
+	//LOADING
+	jQuery(window).load(function() {
+		$(".main-container").show();
+		$(".loader").toggleClass('hidden');
+		$(".main-container").addClass('page-loaded');
+	});
 
 	//LISTA
 	$(function(){

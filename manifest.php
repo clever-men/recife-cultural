@@ -10,9 +10,11 @@
         'img/logo-recife-cultural.svg',
         'img/favicon.ico',
         'css/style.css',
+        'https://fonts.googleapis.com/css?family=Capriola|Maven+Pro:400,500,700',
         'libs/jquery/dist/jquery.min.js',
         'libs/bootstrap-sass/assets/javascripts/bootstrap.min.js',
         'js/app-cache.js',
+        'https://maps.googleapis.com/maps/api/js?key=AIzaSyBCAn0cec2pUCiK4DfKr_wNxcs1sHfmyKA',
         'js/main.js'
     );
     foreach($arquivosDeCacheArray as $arquivo) {
@@ -27,14 +29,6 @@
         $versionHash .= md5_file($arquivo);
     }
 
-    $arquivosDeFallBackArray = array(
-        array('img/','img/offline.png')
-    );
-    $arquivosDeFallBack = "";
-    foreach($arquivosDeFallBackArray as $arquivos) {
-        $arquivosDeFallBack .= implode(" ",$arquivos)."\n";
-        $versionHash .= md5_file($arquivo);
-    }
 
     //Escreve o manifeste de cache
     echo "CACHE MANIFEST \n";
@@ -46,6 +40,5 @@
     echo "NETWORK: \n";
     echo $arquivosDeNetwork."\n\n";
 
-    echo "FALLBACK: \n";
-    echo $arquivosDeFallBack."\n\n";
+
 ?>
