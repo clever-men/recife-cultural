@@ -64,7 +64,7 @@ body{
 /* HEADER ---------------------------------*/
 
 .header{
-	@include position(absolute, 0 null null 0);
+	@include position(fixed, 0 null null 0);
 	background-color: $azul;
 	box-shadow: 0 0 4px rgba($preto, 0.5);
 	z-index: 999;
@@ -126,22 +126,34 @@ body{
 
 .app-content{
 	//position: absolute;
-	height: 100vh;
 	//padding-top: 50px;
 	text-align: center;
 	display: flex;
-	align-items: center;
+	align-items: bottom;
+	padding-top: 110px;
+	height: auto;
+	//min-height: 480px;
+	//margin-top: 90px;
+
 	#site{
 		margin: auto;
 	}
 	.form-select{
 		//@include position(absolute, 10px null null 0);
 		z-index: 10;
-		
 	}
 	.map{
 		position: relative;
 		z-index: 9;
+	}
+	.list-results{
+		max-height: 90px;
+		overflow-y: scroll;
+		li{
+			&:first-child{
+				margin-top: 10px;
+			}
+		}
 	}
 }
 
@@ -152,6 +164,17 @@ body{
 	    border: none;
 	    padding: 6px;
 	    border-radius: 2px;
+	}
+}
+
+.list-results{
+	text-align: center;
+	li{
+		display: inline-block;
+		margin: 0 10px;
+		input{
+			margin-right: 5px;
+		}
 	}
 }
 
@@ -173,7 +196,8 @@ body{
 
 .map {
 	width: 100%;
-	height: 100vh;
+	height: 40vh;
+	border-left: 0;
 }
 
 #trajeto-texto { 
@@ -198,13 +222,12 @@ input[type=text]{
 	border: none;
     text-transform: uppercase;
 }
-.botoes-de-funcoes p {
-    margin-top: 25px;
-}
 .botoes-de-funcoes .btn, .modal-footer .btn{
 	color: $branco;
 	padding: 8px 20px;
-
+	display: block;
+	width: 100%;
+	margin: 0 auto 20px;
 }
 
 @mixin btn-color($bgc){
@@ -245,7 +268,7 @@ input[type=text]{
 	background-color: $roxo;	
 }
 .bg-azul{
-	background-color: $azul;	
+	background-color: $azul;
 }
 
 /* Footer ---------------------------------*/
@@ -256,26 +279,34 @@ footer p {
 
 /* Mobile ---------------------------------*/
 
-@media (min-width:768px) {
-	.p0{
-		border-left: solid $azul;
+@media (min-width: $screen-sm-min) {
+	.map{
+		border-left: 3px solid $azul;
+	}
+	.app-content {
+		height: 60vh;
+		min-height: 0;
+	}
+	.map{
+		height: 40vh;
 	}
 }
 
-@media (max-width:767px) {
-	.p0{
-		border-left: none;
-		border-top: solid $azul;
+@media (min-width: $screen-md-min) {
+	.botoes-de-funcoes{
+		p{
+			margin: 20px 0;
+		}
 	}
-	.app-content {
-	    height: auto;
-	    min-height: 480px;
-	    margin-top: 90px;
+	.app-content{
+		padding-top: 0;
+	}
+	.app-content, .map {
+		height: 100vh;
 	}
 	.botoes-de-funcoes .btn, .modal-footer .btn {
-	    display: block;
-	    width: 100%;
-	    margin: 0 auto !important;
-	    margin-bottom: 20px !important;
+	    display: inline-block;
+	    width: auto;
 	}
 }
+

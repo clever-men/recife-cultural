@@ -53,7 +53,7 @@
 											<option value="4">SHOPPINGS</option>
 										</select>					
 									</form>
-									<ul id="lista" class="list-results"></ul>
+									<ul id="lista" class="list-unstyled list-results"></ul>
 									<form id="form-location" method="post" action="index.php">
 										<div>
 											<input type="hidden" id="txtEnderecoPartida" name="txtEnderecoPartida"  />
@@ -62,10 +62,10 @@
 											<input type="hidden" id="txtEnderecoChegada" name="txtEnderecoChegada" />
 										</div>
 										<div class="botoes-de-funcoes">
-											<p>Clique no botão para obter a sua posição.</p></br>
+											<p>Clique no botão para obter a sua posição.</p>
 											<button type="submit" class="btn btn-laranja-claro" id="btnEnviar" name="btnEnviar">Veja a rota</button>
-											<a href="#" class="btn btn-azul" onClick='listar();' data-toggle="modal" data-target="#myModal">Ver Trajetória</a>
-											<a href="#" class="btn btn-roxo" onClick='listar();' data-toggle="modal" data-target="#myHistorico">Ver histórico</a>
+											<button class="btn btn-azul" onClick='listar();' data-toggle="modal" data-target="#myModal">Ver Trajetória</button>
+											<button class="btn btn-roxo" onClick='listar();' data-toggle="modal" data-target="#myHistorico">Ver histórico</button>
 										</div>
 									</form>
 								</div>
